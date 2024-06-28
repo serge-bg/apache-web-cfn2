@@ -1,0 +1,32 @@
+version: 0.2
+
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.10 #thid wil install python 3.10 on the temporary environment
+         # steps:
+  pre_build:
+    commands:
+      - echo ======= We entered the prebuilt stage ======
+      - echo checking the version of python installed
+      - python --version
+    # steps:
+  build:
+    commands:
+      - echo ====== build started on 'date' =====
+      - pwd
+    finally:
+      - command
+      - command
+    # steps:
+  post_build:
+    commands:
+      - echo ===== build completed at 'date' =======
+      - ls -l
+    # steps:
+artifacts:
+  files:
+    - '**/*'
+
+
